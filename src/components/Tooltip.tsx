@@ -51,9 +51,9 @@ export const Tooltip: React.FC<TooltipProps> = ({ rowNames, field, panelId }) =>
           .style('z-index', 5)
           .style('position', 'absolute');
         if (mousePosition.mouseX > window.innerWidth/2) {
-            div = div.style('right', window.innerWidth-mousePosition.mouseX + 'px')
+            div.style('right', window.innerWidth-mousePosition.mouseX+10 + 'px')
         } else {
-            div = div.style('left', mousePosition.mouseX + 'px')
+            div.style('left', mousePosition.mouseX+10 + 'px')
         }
         div.transition().duration(200).style('opacity', 0.8);
       })
@@ -105,9 +105,9 @@ export const Tooltip: React.FC<TooltipProps> = ({ rowNames, field, panelId }) =>
           .style('z-index', 5)
           .style('position', 'absolute');
         if (mousePosition.mouseX > window.innerWidth/2) {
-            div = div.style('right', window.innerWidth-mousePosition.mouseX + 'px')
+            div.style('right', window.innerWidth-mousePosition.mouseX+10 + 'px')
         } else {
-            div = div.style('left', mousePosition.mouseX + 'px')
+            div.style('left', mousePosition.mouseX+10 + 'px')
         }
         div.transition().duration(200).style('opacity', 0.8);
       })
