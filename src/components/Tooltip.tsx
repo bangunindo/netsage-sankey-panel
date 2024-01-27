@@ -46,10 +46,15 @@ export const Tooltip: React.FC<TooltipProps> = ({ rowNames, field, panelId }) =>
           .style('color', 'white')
           .style('border', '#A8A8A8 solid 5px')
           .style('border-radius', '5px')
-          .style('left', mousePosition.mouseX + 'px')
           .style('top', mousePosition.mouseY + 'px')
           .style('opacity', 0)
+          .style('z-index', 5)
           .style('position', 'absolute');
+        if (mousePosition.mouseX > window.innerWidth/2) {
+            div = div.style('right', window.innerWidth-mousePosition.mouseX + 'px')
+        } else {
+            div = div.style('left', mousePosition.mouseX + 'px')
+        }
         div.transition().duration(200).style('opacity', 0.8);
       })
       .on('mouseout', function (d) {
@@ -95,10 +100,15 @@ export const Tooltip: React.FC<TooltipProps> = ({ rowNames, field, panelId }) =>
           .style('color', 'white')
           .style('border', '#A8A8A8 solid 5px')
           .style('border-radius', '5px')
-          .style('left', mousePosition.mouseX + 'px')
           .style('top', mousePosition.mouseY + 'px')
           .style('opacity', 0)
+          .style('z-index', 5)
           .style('position', 'absolute');
+        if (mousePosition.mouseX > window.innerWidth/2) {
+            div = div.style('right', window.innerWidth-mousePosition.mouseX + 'px')
+        } else {
+            div = div.style('left', mousePosition.mouseX + 'px')
+        }
         div.transition().duration(200).style('opacity', 0.8);
       })
       .on('mouseout', function (d) {
